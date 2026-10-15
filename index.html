@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#76549a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2eafb'/%3E%3Cstop offset='1' stop-color='%23f8e8ef'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M38 14a19 19 0 1 0 12 32A15 15 0 0 1 38 14z' fill='%2376549a'/%3E%3Cpath d='M47 12l1.6 3.6L52 17l-3.400 1.400L47 22l-1.600-3.600L42 17l3.400-1.400z' fill='%23b18a52'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -14,6 +14,37 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.6}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1120px;margin:auto;padding:22px 20px 48px}.hero{background:linear-gradient(125deg,#f2eafb,#fff4f7 70%,#f9f1e5);border:1px solid #eee4f5;border-radius:28px;padding:28px 30px;margin-bottom:20px;position:relative;overflow:hidden}.hero:after{content:"✧";position:absolute;font-size:130px;color:#cbb8df55;right:35px;top:-30px;pointer-events:none}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--purple)}h1{font-size:clamp(27px,4vw,38px);line-height:1.25;margin:8px 0;color:#49345f;letter-spacing:-.04em}.hero p{margin:8px 0 0;color:#70627f;max-width:620px}.hero-top{display:flex;align-items:center;gap:14px}.logo{width:52px;height:52px;border-radius:18px;background:#fff9;display:grid;place-items:center;font-size:27px;box-shadow:var(--shadow)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;max-width:530px}.stat{background:#ffffffb8;border:1px solid #fff;border-radius:15px;padding:12px 15px}.stat small{display:block;color:var(--muted);font-size:11px}.stat strong{font-size:24px;color:#49345f}.nav{display:flex;gap:8px;padding:6px;background:#f0ebf5;border-radius:17px;margin:18px 0 22px;position:sticky;top:8px;z-index:5;backdrop-filter:blur(12px)}.nav button{border:0;background:transparent;color:#766982;padding:11px 16px;border-radius:12px;flex:1;font-weight:700}.nav button.active{background:#fff;color:var(--purple);box-shadow:0 3px 12px #49345f10}.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:18px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);min-width:0}.panel h2{font-size:19px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 18px}.field{margin:14px 0}.field label{display:block;font-size:12px;font-weight:800;color:#675a73;margin-bottom:6px}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #e6deed;border-radius:12px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:#ad92ca;box-shadow:0 0 0 3px #eee5f7}.field textarea{min-height:120px;resize:vertical}.field textarea.short{min-height:80px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;transition:.15s}.btn.primary{background:var(--purple);color:white}.btn.primary:hover{background:#604080}.btn.soft{background:var(--purple2);color:var(--purple)}.btn.outline{background:#fff;border:1px solid var(--line);color:#685875}.btn.danger{background:#fff0f2;color:#a4455b}.btn.small{font-size:12px;padding:7px 10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.hint{background:#fbf8fe;border:1px solid #efe7f6;border-radius:14px;padding:14px;font-size:13px;color:#766782}.hint b{color:#5b456e}.tag{display:inline-block;font-size:11px;padding:4px 9px;border-radius:999px;background:#f0e8f7;color:#71548c;font-weight:800}.tag.pink{background:#f9e9ef;color:#a45e79}.record{border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:10px;transition:.15s}.record:hover{border-color:#cbb8df;background:#fdfbff}.record-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.record h3{font-size:15px;margin:7px 0 2px}.meta{font-size:11px;color:var(--muted)}.snippet{font-size:13px;color:#655b6e;white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 0}.empty{text-align:center;padding:38px 16px;color:var(--muted)}.empty .moon{font-size:36px}.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h2{margin:0}.search-row{display:flex;gap:9px;margin:14px 0}.search{flex:1;min-width:0}.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.filter{border:1px solid var(--line);background:#fff;color:#756a80;border-radius:999px;padding:6px 11px;font-size:12px}.filter.active{background:var(--purple);border-color:var(--purple);color:#fff}.barrow{margin:14px 0}.barlabel{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:6px}.bar{height:9px;background:#f0ebf5;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#9b7bb8,#d5b6d9)}.analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.insight{padding:16px;border-radius:16px;background:#f8f3fc;border:1px solid #eee5f6}.insight h3{margin:0 0 6px;font-size:14px}.insight p{font-size:13px;color:#6f6379;margin:0}.foot{font-size:11px;color:#92889a;text-align:center;margin-top:22px}.hidden{display:none!important}.modal-back{position:fixed;inset:0;background:#20152d66;z-index:20;display:grid;place-items:center;padding:16px}.modal{background:#fff;border-radius:22px;max-width:700px;width:100%;max-height:90vh;overflow:auto;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.close{border:0;background:#f3edf7;border-radius:10px;padding:7px 12px;color:var(--purple)}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#30283a;color:#fff;padding:11px 18px;border-radius:99px;font-size:13px;z-index:30;box-shadow:var(--shadow)}.storage-note{font-size:12px;color:#766782;background:#f8f4fb;padding:12px 14px;border-radius:13px;margin-top:14px}
 .login{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-items:center;padding:20px}.login-card{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:34px 28px;max-width:400px;width:100%;text-align:center}.login-card .logo{margin:0 auto 14px}.login-card h1{font-size:28px;margin:4px 0 8px}.login-card p{color:var(--muted);font-size:13px;margin:0 0 22px}.google-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#fff;border:1px solid #d9d0e2;border-radius:12px;padding:12px 16px;font-weight:800;color:#49345f}.google-btn:hover{background:#faf7fd}.login-msg{font-size:12px;color:#a4455b;margin-top:14px;white-space:pre-wrap}.tagbox{display:flex;flex-wrap:wrap;align-items:center;gap:6px;border:1px solid #e6deed;border-radius:12px;padding:7px 9px;background:#fff}.tagbox:focus-within{border-color:#ad92ca;box-shadow:0 0 0 3px #eee5f7}#tagChips{display:contents}.tagbox input{flex:1;min-width:140px;border:0!important;box-shadow:none!important;padding:5px 3px!important;outline:none;background:transparent}.chip{display:inline-flex;align-items:center;gap:4px;background:#f0e8f7;color:#71548c;font-size:12px;font-weight:800;border-radius:999px;padding:4px 6px 4px 10px}.chip button{border:0;background:#fff8;color:#71548c;border-radius:50%;width:18px;height:18px;line-height:16px;padding:0;font-size:12px}.oc{display:inline-block;font-size:11px;padding:4px 9px;border-radius:999px;font-weight:800}.oc-hit{background:#e3f3ea;color:#3b7860}.oc-partial{background:#f8efdc;color:#8d6a2f}.oc-miss{background:#eceaf0;color:#6f6779}.tag-suggest{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}.tag-suggest .filter{padding:4px 10px}.userbar{position:absolute;top:14px;right:18px;z-index:2;display:flex;align-items:center;gap:8px;font-size:11px;color:#70627f}.userbar span{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media(max-width:760px){.app{padding:12px 12px 30px}.hero{padding:22px 18px;border-radius:22px}.hero:after{right:5px;font-size:95px}.layout{grid-template-columns:1fr}.panel{padding:17px}.nav{top:4px}.nav button{padding:10px 5px;font-size:13px}.stats{gap:7px}.stat{padding:10px}.stat strong{font-size:21px}.two,.analysis-grid{grid-template-columns:1fr}.section-title{align-items:flex-start;flex-direction:column}.search-row{flex-wrap:wrap}.search{flex-basis:100%}}
+/* ---- reminders / pins / images / timeline ---- */
+.pin{border:0;background:transparent;font-size:22px;line-height:1;color:#c7b3d9;padding:4px 6px;min-height:0!important}.pin.on{color:var(--gold)}.rh-act{display:flex;gap:2px;align-items:flex-start;flex:none}
+.due{color:var(--gold);font-weight:800}.due.over{color:#a4455b}.due.done{color:var(--muted);font-weight:400}
+.due-panel{margin-bottom:18px;border-color:#efd9b8;background:#fffaf2}.due-row{padding:10px 12px;border:1px solid #efd9b8;border-radius:12px;background:#fff;margin-top:8px;cursor:pointer;overflow-wrap:anywhere}
+.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}.img-grid:empty{display:none}.img-grid .it{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f3edf7}.img-grid img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}.img-grid .x{position:absolute;top:4px;right:4px;border:0;background:#000a;color:#fff;border-radius:50%;width:26px;height:26px;padding:0;min-height:0!important}
+.lightbox{position:fixed;inset:0;background:#000d;z-index:60;display:grid;place-items:center;padding:12px;cursor:zoom-out}.lightbox img{max-width:100%;max-height:100%;border-radius:10px}
+.seg{display:inline-flex;background:#f0ebf5;border-radius:12px;padding:3px}.seg button{border:0;background:transparent;padding:7px 12px;border-radius:9px;font-size:12px;font-weight:800;color:#766982;min-height:34px}.seg button.active{background:#fff;color:var(--purple);box-shadow:0 2px 8px #49345f12}
+.tl-month{font-size:13px;font-weight:800;color:var(--purple);margin:20px 0 10px}.tl{position:relative;margin-left:8px;padding-left:22px;border-left:2px solid #e6deed}.tl-item{position:relative;margin:0 0 12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;overflow-wrap:anywhere}.tl-item:hover{border-color:#cbb8df}.tl-item:before{content:"";position:absolute;left:-30px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--purple);border:2px solid #fff;box-shadow:0 0 0 2px #cbb8df}.tl-item.event:before{background:var(--green);box-shadow:0 0 0 2px #bcd8cb}.tl-item.target:before{background:var(--gold);box-shadow:0 0 0 2px #e6d3b0}.tl-date{font-size:11px;color:var(--muted);margin-bottom:2px}.tl-kind{font-weight:800}
+.ev-list .ev{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}.ev .d{flex:none;color:var(--muted);font-size:12px;width:86px}.ev .t{flex:1;min-width:0;overflow-wrap:anywhere}.ev button{border:0;background:transparent;color:#a4455b;font-size:16px;padding:0 4px;min-height:0!important}.ev-add{display:grid;grid-template-columns:150px 1fr auto;gap:8px;margin-top:10px}
+@media(max-width:760px){.ev-add{grid-template-columns:1fr}.ev .d{width:76px}.seg{width:100%}.seg button{flex:1}}
+/* ---- responsive refinements ---- */
+.record-head>div:first-child{min-width:0}.record h3,.meta,.snippet,.barlabel span{overflow-wrap:anywhere}.barlabel{flex-wrap:wrap}.barlabel span:last-child{text-align:right}.toast{max-width:calc(100vw - 32px);text-align:center;border-radius:18px;line-height:1.5}
+.nav button{white-space:nowrap}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+@media(max-width:760px){
+  .app{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right));padding-bottom:max(30px,env(safe-area-inset-bottom))}
+  .userbar{position:static;justify-content:flex-end;margin:-6px 0 12px}.userbar span{max-width:60vw}
+  .hero-top{gap:12px}.logo{width:46px;height:46px;border-radius:15px;font-size:24px;flex:none}.eyebrow{font-size:10px;letter-spacing:.08em;line-height:1.4}
+  .hero p{font-size:13px}.hero:after{opacity:.5;top:-20px}
+  .stat small{font-size:10px;line-height:1.3}.stat strong{font-size:20px}
+  .nav{gap:2px;padding:4px;margin:14px 0 16px}.nav button{padding:10px 2px;font-size:12px;letter-spacing:-.02em}.nav .ic{display:none}
+  .field input,.field select,.field textarea,.search,.tagbox input{font-size:16px}
+  .search-row select.search{flex:1 1 130px!important;max-width:none!important}
+  .record-head{flex-wrap:wrap}.record-head>.actions{width:100%}.record-head>.actions .btn{flex:1}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin-left:-4px;margin-right:-4px;padding:2px 4px 8px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{flex:none;white-space:nowrap;padding:8px 13px}
+  .btn.small{min-height:38px}.btn{min-height:44px}
+  #entryForm .actions .btn.primary{flex:1 1 100%}#entryForm .actions .btn.outline{flex:1}
+  .modal-back{padding:0;align-items:end}.modal{border-radius:22px 22px 0 0;max-height:92vh;padding:18px 16px max(22px,env(safe-area-inset-bottom))}.modal-head{align-items:flex-start}.modal .actions .btn{flex:1 1 auto}
+  .section-title .btn{align-self:stretch}.panel h2{font-size:17px}.login-card{padding:28px 20px}.foot{padding:0 8px}.tag-suggest .filter{padding:6px 11px}
+}
+@media(max-width:380px){.nav button{font-size:11px}.panel{padding:15px}.stats{gap:5px}.stat{padding:9px 8px}}
 </style>
 </head>
 <body>
@@ -25,10 +56,11 @@
   <p>占いの結果を集めて、点と点をつなぐ。<br>自分を知るための、あなただけの鑑定データベース。</p>
   <div class="stats"><div class="stat"><small>保存した鑑定</small><strong id="statTotal">0</strong></div><div class="stat"><small>タグの種類</small><strong id="statMethods">0</strong></div><div class="stat"><small>テーマの傾向</small><strong id="statThemes">0</strong></div></div>
 </header>
-<nav class="nav" aria-label="メインメニュー"><button class="active" data-tab="dashboard">✧ ホーム</button><button data-tab="records">▤ 記録一覧</button><button data-tab="analysis">⌁ 横断分析</button><button data-tab="backup">↗ データ管理</button></nav>
+<nav class="nav" aria-label="メインメニュー"><button class="active" data-tab="dashboard"><span class="ic">✧ </span>ホーム</button><button data-tab="records"><span class="ic">▤ </span>記録一覧</button><button data-tab="analysis"><span class="ic">⌁ </span>横断分析</button><button data-tab="backup"><span class="ic">↗ </span>データ管理</button></nav>
 
 <main>
 <section id="tab-dashboard" class="tab">
+  <div id="dueBox"></div>
   <div class="layout">
     <div class="panel">
       <h2 id="formTitle">鑑定結果を記録する</h2><p class="sub">鑑定文をそのまま貼り付けてOK。気づきや実際の出来事も一緒に残そう。</p>
@@ -41,8 +73,13 @@
         <div class="field"><label for="title">記録タイトル</label><input id="title" placeholder="例：2026年の恋愛運、私の本質"></div>
         <div class="field"><label for="tagInput">タグ（任意・いくつでも）</label><div class="tagbox"><span id="tagChips"></span><input id="tagInput" placeholder="例：タロット、恋愛　（Enterで追加）" enterkeyhint="done" autocomplete="off"></div><div id="tagSuggest" class="tag-suggest"></div></div>
         <div class="field"><label for="result">占いの結果 *</label><textarea id="result" required placeholder="鑑定結果を貼り付けてね。長文でも大丈夫。&#10;&#10;例：人に気を遣いすぎる傾向がある。自分の気持ちを言葉にすることが大切。"></textarea></div>
+        <div class="two">
+          <div class="field"><label for="targetLabel">予言の時期（任意）</label><input id="targetLabel" placeholder="例：2026年秋、来年の春"></div>
+          <div class="field"><label for="targetDate">見返す日（任意）</label><input id="targetDate" type="date"></div>
+        </div>
         <div class="field"><label for="outcome">現実との照合（後からでも変更できます）</label><select id="outcome"><option value="">まだわからない</option><option value="hit">当たった</option><option value="partial">一部当たった</option><option value="miss">外れた</option></select></div>
         <div class="field"><label for="memo">自分の感想・現実の出来事（任意）</label><textarea id="memo" class="short" placeholder="例：今の状況に当てはまると感じた。実際に起きたことは……"></textarea></div>
+        <div class="field"><label>写真・画像（任意・1つの記録に4枚まで）</label><div id="imgPreview" class="img-grid"></div><label class="btn soft small" style="display:inline-flex;align-items:center;margin-top:8px;cursor:pointer">📷 画像を追加<input id="imgInput" type="file" accept="image/*" multiple hidden></label></div>
         <div class="actions"><button class="btn primary" type="submit" id="saveBtn">＋ 記録を保存</button><button class="btn outline hidden" type="button" id="cancelEdit">編集をやめる</button><button class="btn outline" type="reset" id="clearForm">入力をクリア</button></div>
       </form>
       <div class="storage-note">☁ 記録はあなたのGoogleアカウントに紐づけてクラウド保存され、ログインした端末すべてで同期されます（あなた以外は閲覧できません）。</div>
@@ -52,6 +89,7 @@
       <div class="hint"><b>01 · まずは記録</b><br>鑑定日とタグ（占術やテーマなど）を入れて、結果を保存。</div>
       <div class="hint" style="margin-top:10px"><b>02 · 共通点を探す</b><br>「横断分析」で複数の鑑定に登場するキーワードを確認。</div>
       <div class="hint" style="margin-top:10px"><b>03 · 現実と照らし合わせる</b><br>感想欄に実際の出来事や、自分がどう感じたかも記録。</div>
+      <div id="pinBox"></div>
       <div style="margin-top:22px"><div class="section-title"><h2>最近の記録</h2><button class="btn soft small" type="button" data-goto="records">一覧を見る →</button></div><div id="recentRecords"></div></div>
     </aside>
   </div>
@@ -61,7 +99,7 @@
   <div class="panel">
     <div class="section-title"><div><h2>鑑定記録一覧</h2><p class="sub" style="margin:4px 0 0">保存した記録を検索・編集できます。</p></div><button class="btn primary" type="button" data-goto="dashboard">＋ 新しい記録</button></div>
     <div class="search-row"><input class="search" id="search" placeholder="タイトル・鑑定結果・占い名・メモを検索…"><select id="sort" class="search" style="max-width:165px;flex:0 0 165px"><option value="new">日付が新しい順</option><option value="old">日付が古い順</option></select><select id="ocFilter" class="search" style="max-width:165px;flex:0 0 165px"><option value="">照合：すべて</option><option value="hit">当たった</option><option value="partial">一部当たった</option><option value="miss">外れた</option><option value="none">まだわからない</option></select></div>
-    <div class="actions" style="margin:12px 0"><button class="btn soft small" type="button" id="refreshRecords">↻ 一覧を更新</button><span id="recordCount" class="meta" aria-live="polite"></span></div><div id="filters" class="filters"></div><div id="recordList"></div>
+    <div class="actions" style="margin:12px 0"><div class="seg" role="group" aria-label="表示切り替え"><button type="button" class="active" data-vm="list">リスト</button><button type="button" data-vm="timeline">タイムライン</button></div><button class="btn soft small" type="button" id="refreshRecords">↻ 一覧を更新</button><span id="recordCount" class="meta" aria-live="polite"></span></div><div id="filters" class="filters"></div><div id="recordList"></div>
   </div>
 </section>
 
@@ -87,18 +125,19 @@
       <div class="hint"><b>クラウドに保存</b><br>記録はGoogleログインでひも付いたクラウド上のデータベースに保存されます。PC・スマホ・別ブラウザでも、同じアカウントでログインすれば同じ記録が見られます。</div>
       <div class="hint" style="margin-top:10px"><b>オフラインでも使えます</b><br>電波がないときも入力でき、つながったときに自動で同期されます。念のため、バックアップは時々ダウンロードしておくと安心です。</div>
       <div class="hint" style="margin-top:10px"><b>分析について</b><br>現時点の分析はキーワード集計です。占いの結果を事実と断定せず、自分を振り返るヒントとして利用してください。</div>
-      <button class="btn danger" id="deleteAllBtn" style="margin-top:18px">すべての記録を削除</button>
+      <button class="btn danger" id="deleteAllBtn" style="margin-top:18px">すべての記録をゴミ箱へ</button>
     </aside>
   </div>
+  <div class="panel" style="margin-top:18px"><h2>🗑 ゴミ箱</h2><p class="sub">削除した記録は30日間ここに残り、復元できます。30日を過ぎると自動で完全に削除されます。</p><div id="trashList"></div></div>
 </section>
 </main>
 <div class="foot">FORTUNE JOURNAL · 占いは自分を見つめるヒントとして。未来や他人の気持ちを保証するものではありません。</div>
 </div>
-<div id="modalRoot"></div><div id="toast" class="toast hidden" role="status"></div>
+<div id="lightbox" class="lightbox hidden"></div><div id="modalRoot"></div><div id="toast" class="toast hidden" role="status"></div>
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import {initializeFirestore,persistentLocalCache,persistentMultipleTabManager,doc,onSnapshot,setDoc} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {initializeFirestore,persistentLocalCache,persistentMultipleTabManager,doc,collection,onSnapshot,getDoc,writeBatch,deleteDoc,setDoc} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 // ▼ Firebaseコンソールで取得した値に置き換えてください（SETUP.md 参照）
 const firebaseConfig={
   apiKey:"AIzaSyA6eJZxntVQWLA2l4BG57KVhs0Vay86uaY",
@@ -141,11 +180,56 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt
 function today(){return new Date().toLocaleDateString('sv-SE')}
 let uid=null,unsub=null,ready=false,db=null,auth=null;
 function readLocal(){try{const d=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(d)?d:[]}catch(e){return[]}}
+let trash=[],remote=new Map(),legacyHad=false,purgedOnce=false;
+const TRASH_DAYS=30;
+const recRef=id=>doc(db,'users',uid,'records',String(id));
+const sig=o=>JSON.stringify(o,Object.keys(o).sort());
+function clean(r){const o=JSON.parse(JSON.stringify(r));delete o.deletedAt;o.id=String(o.id);return o}
+async function flush(ops){for(let i=0;i<ops.length;i+=400){const b=writeBatch(db);ops.slice(i,i+400).forEach(f=>f(b));await b.commit()}}
+// records（画面上の配列）と remote（クラウド上の最新）の差分だけを書き込む。削除はゴミ箱へ（deletedAt を付ける）
 function persist(){
   if(!ready||!uid){notify('クラウドと接続できていません。ログイン状態を確認してね');return false}
+  const ops=[],now=new Date().toISOString(),seen=new Set();
+  records.forEach(r=>{const c=clean(r),id=c.id;seen.add(id);if(!remote.has(id)||sig(remote.get(id))!==sig(c)){ops.push(b=>b.set(recRef(id),c));remote.set(id,c)}});
+  [...remote.keys()].filter(id=>!seen.has(id)).forEach(id=>{const c={...remote.get(id),deletedAt:now};ops.push(b=>b.set(recRef(id),c));trash.push(c);remote.delete(id)});
   render();
-  setDoc(doc(db,'users',uid),{records:JSON.parse(JSON.stringify(records)),updatedAt:new Date().toISOString()}).catch(e=>notify('クラウド保存に失敗しました（'+(e.code||'error')+'）'));
+  if(ops.length)flush(ops).catch(e=>notify('クラウド保存に失敗しました（'+(e.code||'error')+'）'));
   return true
+}
+function renderTrash(){
+  const box=$('trashList');if(!box)return;
+  const rs=[...trash].sort((a,b)=>(b.deletedAt||'').localeCompare(a.deletedAt||''));
+  box.innerHTML=rs.length?rs.map(r=>{const left=Math.max(0,Math.ceil((new Date(r.deletedAt).getTime()+TRASH_DAYS*864e5-Date.now())/864e5));return `<article class="record"><div class="record-head"><div>${tagsHtml(r)}<h3>${esc(r.title||'無題の記録')}</h3><div class="meta">${esc(r.date||'日付なし')} · 完全に消えるまであと${left}日</div></div><div class="actions"><button class="btn soft small" data-restore="${esc(r.id)}">復元</button><button class="btn danger small" data-purge="${esc(r.id)}">完全に削除</button></div></div><p class="snippet">${esc((r.result||'').slice(0,100))}${(r.result||'').length>100?'…':''}</p></article>`}).join(''):'<div class="empty">ゴミ箱は空です。</div>';
+  box.querySelectorAll('[data-restore]').forEach(b=>b.addEventListener('click',()=>restoreRecord(b.dataset.restore)));
+  box.querySelectorAll('[data-purge]').forEach(b=>b.addEventListener('click',()=>purgeRecord(b.dataset.purge)));
+}
+function restoreRecord(id){
+  const r=trash.find(x=>String(x.id)===String(id));if(!r||!ready)return;
+  const c=clean(r);trash=trash.filter(x=>x!==r);records.push(c);remote.set(c.id,c);render();
+  setDoc(recRef(c.id),c).catch(e=>notify('復元に失敗しました（'+(e.code||'error')+'）'));notify('記録を復元しました')
+}
+function purgeRecord(id){
+  if(!ready||!confirm('この記録を完全に削除します。元に戻せません。よろしいですか？'))return;
+  const gone=trash.find(x=>String(x.id)===String(id));
+  (gone&&gone.images||[]).forEach(i=>deleteDoc(imgRef(i)).catch(()=>{}));
+  trash=trash.filter(x=>String(x.id)!==String(id));render();
+  deleteDoc(recRef(id)).catch(e=>notify('削除に失敗しました（'+(e.code||'error')+'）'));notify('完全に削除しました')
+}
+function purgeOld(){
+  const limit=Date.now()-TRASH_DAYS*864e5,old=trash.filter(r=>new Date(r.deletedAt).getTime()<limit);
+  if(!old.length)return;
+  trash=trash.filter(r=>!old.includes(r));
+  flush(old.flatMap(r=>[b=>b.delete(recRef(r.id)),...(r.images||[]).map(i=>b=>b.delete(imgRef(i)))])).catch(()=>{})
+}
+// 旧形式（users/{uid} の records 配列）を記録ごとのドキュメントへ一度だけ移行する
+async function migrateV2(){
+  const ref=doc(db,'users',uid),s=await getDoc(ref);
+  const d=s.exists()?s.data():{},old=Array.isArray(d.records)?d.records:[];
+  legacyHad=old.length>0;
+  if(!old.length||d.migratedV2)return;
+  const ops=old.filter(r=>r&&r.result).map((r,i)=>{const c=clean({...r,id:String(r.id||Date.now().toString(36)+i).replace(/[\/\s]/g,'_')});return b=>b.set(recRef(c.id),c)});
+  ops.push(b=>b.set(ref,{migratedV2:true,migratedAt:new Date().toISOString()},{merge:true}));
+  await flush(ops);
 }
 function showLogin(on,msg){$('loginView').classList.toggle('hidden',!on);if(msg!==undefined)$('loginMsg').textContent=msg}
 function migrateLocal(){
@@ -155,14 +239,19 @@ function migrateLocal(){
   if(local.length&&confirm(`この端末に保存されていた記録が${local.length}件あります。クラウドに引き継ぎますか？`)){records=local;persist()}
   try{localStorage.setItem(flag,'1')}catch(e){}
 }
-function startSync(user){
+async function startSync(user){
   uid=user.uid;$('userEmail').textContent=user.email||'';showLogin(false);
-  unsub=onSnapshot(doc(db,'users',uid),snap=>{
+  try{await migrateV2()}catch(e){if(e.code==='permission-denied')notify('Firestoreのルールを更新してください（SETUP.md 参照）')}
+  if(uid!==user.uid)return;
+  unsub=onSnapshot(collection(db,'users',uid,'records'),snap=>{
     const first=!ready;
-    if(snap.exists()){const r=snap.data().records;records=Array.isArray(r)?r:[];ready=true}
-    else{records=[];ready=true;if(first&&!snap.metadata.fromCache)migrateLocal()}
+    records=[];trash=[];remote=new Map();
+    snap.forEach(d=>{const r={...d.data(),id:d.id};if(r.deletedAt)trash.push(r);else{records.push(r);remote.set(r.id,clean(r))}});
+    ready=true;
+    if(!purgedOnce&&!snap.metadata.fromCache){purgedOnce=true;purgeOld()}
+    if(first&&snap.empty&&!snap.metadata.fromCache&&!legacyHad)migrateLocal();
     render();
-  },err=>{notify('同期エラー：'+(err.code||'error'))});
+  },err=>{notify(err.code==='permission-denied'?'Firestoreのルールを更新してください（SETUP.md 参照）':'同期エラー：'+(err.code||'error'))});
 }
 function initFirebase(){
   if(firebaseConfig.apiKey.startsWith('YOUR_')){showLogin(true,'Firebaseの設定が未入力です。\nSETUP.md の手順で firebaseConfig を設定してください。');$('loginBtn').disabled=true;return}
@@ -170,7 +259,7 @@ function initFirebase(){
   db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()})});
   onAuthStateChanged(auth,user=>{
     if(unsub){unsub();unsub=null}
-    ready=false;uid=null;records=[];
+    ready=false;uid=null;records=[];trash=[];remote=new Map();legacyHad=false;purgedOnce=false;
     if(!user){showLogin(true,'');render();return}
     startSync(user);
   });
@@ -183,22 +272,95 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.goto)));
 function stats(){ $('statTotal').textContent=records.length;$('statMethods').textContent=allTagCounts().length;$('statThemes').textContent=allThemes().length}
 function allThemes(){let txt=records.map(r=>r.result+' '+r.memo+' '+r.title).join(' ');return lexicon.filter(([name,words])=>words.some(w=>txt.includes(w))).map(x=>x[0])}
-function card(r){return `<article class="record"><div class="record-head"><div>${tagsHtml(r)}<h3>${esc(r.title||'無題の記録')}</h3><div class="meta">${esc(r.date||'日付なし')}${r.source?' · '+esc(r.source):''}</div></div><button class="btn outline small" data-view="${esc(r.id)}">詳細 →</button></div><p class="snippet">${esc(r.result.slice(0,180))}${r.result.length>180?'…':''}</p></article>`}
+let viewMode='list',formImgs=[],origImgs=[];
+const imgRef=id=>doc(db,'users',uid,'images',String(id));
+const imgCache=new Map();
+async function getImg(id){if(imgCache.has(id))return imgCache.get(id);try{const s=await getDoc(imgRef(id));const d=s.exists()?s.data().data:null;if(d)imgCache.set(id,d);return d}catch(e){return null}}
+function compressImage(file){return new Promise((res,rej)=>{const url=URL.createObjectURL(file),im=new Image();im.onload=()=>{URL.revokeObjectURL(url);const k=Math.min(1,1280/Math.max(im.width,im.height)),w=Math.round(im.width*k),h=Math.round(im.height*k),c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(im,0,0,w,h);let q=.78,d=c.toDataURL('image/jpeg',q);while(d.length>420000&&q>.4){q-=.08;d=c.toDataURL('image/jpeg',q)}d.length>700000?rej(new Error('big')):res(d)};im.onerror=()=>{URL.revokeObjectURL(url);rej(new Error('load'))};im.src=url})}
+function openLightbox(src){const l=$('lightbox');l.innerHTML=`<img src="${src}" alt="">`;l.classList.remove('hidden');l.onclick=()=>{l.classList.add('hidden');l.innerHTML=''}}
+function renderFormImgs(){
+  const box=$('imgPreview');
+  box.innerHTML=formImgs.map((im,i)=>`<div class="it">${im.data?`<img src="${im.data}" alt="添付画像">`:''}<button type="button" class="x" data-rmimg="${i}" aria-label="画像を外す">×</button></div>`).join('');
+  box.querySelectorAll('[data-rmimg]').forEach(b=>b.onclick=()=>{formImgs.splice(+b.dataset.rmimg,1);renderFormImgs()});
+  box.querySelectorAll('img').forEach(im=>im.onclick=()=>openLightbox(im.src));
+}
+function saveImages(rid){
+  formImgs.filter(i=>i.isNew).forEach(i=>{imgCache.set(i.id,i.data);setDoc(imgRef(i.id),{recordId:rid,data:i.data,createdAt:new Date().toISOString()}).catch(e=>notify('画像の保存に失敗しました（'+(e.code||'error')+'）'))});
+  origImgs.filter(id=>!formImgs.some(i=>i.id===id)).forEach(id=>deleteDoc(imgRef(id)).catch(()=>{}));
+}
+function dueState(r){if(!r.targetDate)return'';if(r.outcome)return'done';return r.targetDate<=today()?'over':'soon'}
+function updateRec(id,patch){records=records.map(x=>String(x.id)===String(id)?{...x,...patch,updatedAt:new Date().toISOString()}:x);return persist()}
+function togglePin(id){const r=records.find(x=>String(x.id)===String(id));if(r)updateRec(id,{pinned:!r.pinned})}
+function card(r){return `<article class="record"><div class="record-head"><div>${tagsHtml(r)}<h3>${esc(r.title||'無題の記録')}</h3><div class="meta">${esc(r.date||'日付なし')}${r.source?' · '+esc(r.source):''}${r.targetLabel||r.targetDate?` · <span class="due ${dueState(r)}">⏰ ${esc(r.targetLabel||r.targetDate)}</span>`:''}${r.images&&r.images.length?` · 📷${r.images.length}`:''}</div></div><div class="rh-act"><button class="pin ${r.pinned?'on':''}" type="button" data-pin="${esc(r.id)}" aria-label="${r.pinned?'お気に入り解除':'お気に入りに追加'}" aria-pressed="${!!r.pinned}">${r.pinned?'★':'☆'}</button><button class="btn outline small" data-view="${esc(r.id)}">詳細 →</button></div></div><p class="snippet">${esc(r.result.slice(0,180))}${r.result.length>180?'…':''}</p></article>`}
 function renderRecent(){let rs=[...records].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,3);$('recentRecords').innerHTML=rs.length?rs.map(card).join(''):'<div class="empty"><div class="moon">☾</div>まだ記録がないよ。<br>最初の鑑定結果を保存してみよう。</div>';bindView()}
-function renderFilters(){const tc=allTagCounts();if(activeFilter!=='すべて'&&!tc.some(x=>x.name===activeFilter))activeFilter='すべて';$('filters').innerHTML=[{name:'すべて',count:records.length},...tc].map(x=>`<button class="filter ${x.name===activeFilter?'active':''}" data-filter="${esc(x.name)}">${esc(x.name)} ${x.count}</button>`).join('');$('filters').querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;renderRecords()}))}
-function renderRecords(){renderFilters();const q=$('search').value.trim().toLowerCase();let rs=[...records].filter(r=>(activeFilter==='すべて'||tagsOf(r).includes(activeFilter))&&($('ocFilter').value===''||($('ocFilter').value==='none'?!r.outcome:r.outcome===$('ocFilter').value))&&[r.title,tagsOf(r).join(' '),r.source,r.result,r.memo].join(' ').toLowerCase().includes(q));rs.sort((a,b)=>$('sort').value==='old'?(a.date||'').localeCompare(b.date||''):(b.date||'').localeCompare(a.date||''));$('recordList').innerHTML=rs.length?rs.map(card).join(''):'<div class="empty"><div class="moon">✧</div>条件に合う記録が見つからないよ。<br>検索語を消すか「一覧を更新」を押してみてね。</div>';if($('recordCount'))$('recordCount').textContent=`表示 ${rs.length}件 ／ 保存中 ${records.length}件`;bindView()}
-function bindView(){document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>viewRecord(b.dataset.view)))}
-function viewRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;$('modalRoot').innerHTML=`<div class="modal-back" id="backdrop"><div class="modal"><div class="modal-head"><div>${tagsHtml(r)}<h2 style="margin:9px 0 0">${esc(r.title||'無題の記録')}</h2><div class="meta">${esc(r.date)}${r.source?' · '+esc(r.source):''}</div></div><button class="close" id="closeModal">閉じる ✕</button></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>占いの結果</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.result)}</div>${r.memo?`<h3 style="margin-top:22px">感想・現実の出来事</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.memo)}</div>`:''}<h3 style="margin-top:22px">現実との照合</h3><div class="actions">${[['','まだわからない'],['hit','当たった'],['partial','一部当たった'],['miss','外れた']].map(([v,l])=>`<button class="btn ${(r.outcome||'')===v?'primary':'outline'} small" data-oc="${v}">${l}</button>`).join('')}</div><div class="actions" style="margin-top:24px"><button class="btn primary" id="editRecord">編集する</button><button class="btn danger" id="deleteRecord">削除する</button></div></div></div>`;
-$('closeModal').onclick=closeModal;$('modalRoot').querySelectorAll('[data-oc]').forEach(b=>b.onclick=()=>{records=records.map(x=>String(x.id)===String(id)?{...x,outcome:b.dataset.oc,updatedAt:new Date().toISOString()}:x);if(persist()){viewRecord(id);notify('照合結果を更新しました')}});$('backdrop').addEventListener('click',e=>{if(e.target.id==='backdrop')closeModal()});$('editRecord').onclick=()=>{closeModal();editRecord(id)};$('deleteRecord').onclick=()=>{if(confirm('この鑑定記録を削除しますか？')){records=records.filter(x=>String(x.id)!==String(id));persist();closeModal();notify('記録を削除しました')}}}
+function renderPins(){const ps=records.filter(r=>r.pinned).sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,3);$('pinBox').innerHTML=ps.length?`<div style="margin-top:22px"><div class="section-title"><h2>★ お気に入り</h2></div>${ps.map(card).join('')}</div>`:'';bindView()}
+function renderDue(){
+  const t=today(),lim=new Date(Date.now()+30*864e5).toLocaleDateString('sv-SE');
+  const withT=records.filter(r=>r.targetDate&&!r.outcome).sort((a,b)=>a.targetDate.localeCompare(b.targetDate));
+  const over=withT.filter(r=>r.targetDate<=t),soon=withT.filter(r=>r.targetDate>t&&r.targetDate<=lim);
+  const row=r=>`<div class="due-row" data-view="${esc(r.id)}"><b>${esc(r.title||'無題の記録')}</b><div class="meta">⏰ ${esc(r.targetLabel||'')} ${esc(r.targetDate)}</div></div>`;
+  $('dueBox').innerHTML=(over.length||soon.length)?`<div class="panel due-panel">${over.length?`<h2>⏰ 答え合わせの時期です</h2><p class="sub">記録を開いて「当たった／外れた」を選びましょう。</p>${over.slice(0,5).map(row).join('')}`:''}${soon.length?`<h3 style="margin:${over.length?'16px':'0'} 0 4px;font-size:14px">もうすぐ（30日以内）</h3>${soon.slice(0,5).map(row).join('')}`:''}</div>`:'';
+  bindView()
+}
+function renderFilters(){const tc=allTagCounts();if(activeFilter!=='すべて'&&activeFilter!=='__pin'&&!tc.some(x=>x.name===activeFilter))activeFilter='すべて';const items=[{key:'すべて',label:'すべて',count:records.length},{key:'__pin',label:'★ お気に入り',count:records.filter(r=>r.pinned).length},...tc.map(x=>({key:x.name,label:x.name,count:x.count}))];$('filters').innerHTML=items.map(x=>`<button class="filter ${x.key===activeFilter?'active':''}" data-filter="${esc(x.key)}">${esc(x.label)} ${x.count}</button>`).join('');$('filters').querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;renderRecords()}))}
+function timelineHtml(rs){
+  const items=[];
+  rs.forEach(r=>{items.push({d:r.date||'',k:'record',r});(r.events||[]).forEach(e=>items.push({d:e.date||'',k:'event',r,e}));if(r.targetDate)items.push({d:r.targetDate,k:'target',r})});
+  const asc=$('sort').value==='old';items.sort((a,b)=>asc?a.d.localeCompare(b.d):b.d.localeCompare(a.d));
+  let html='',cur=null;
+  items.forEach(it=>{
+    const m=it.d?it.d.slice(0,4)+'年'+it.d.slice(5,7)+'月':'日付なし';
+    if(m!==cur){if(cur!==null)html+='</div>';html+=`<div class="tl-month">${esc(m)}</div><div class="tl">`;cur=m}
+    const id=esc(it.r.id),title=esc(it.r.title||'無題の記録');
+    if(it.k==='record')html+=`<div class="tl-item" data-view="${id}"><div class="tl-date">${esc(it.d)} · <span class="tl-kind" style="color:var(--purple)">鑑定</span></div><b>${title}</b><div style="margin:4px 0">${tagsHtml(it.r)}</div><div class="snippet" style="margin:4px 0 0">${esc(it.r.result.slice(0,90))}${it.r.result.length>90?'…':''}</div></div>`;
+    else if(it.k==='event')html+=`<div class="tl-item event" data-view="${id}"><div class="tl-date">${esc(it.d)} · <span class="tl-kind" style="color:var(--green)">現実の出来事</span></div>${esc(it.e.text)}<div class="meta">「${title}」に関連</div></div>`;
+    else html+=`<div class="tl-item target" data-view="${id}"><div class="tl-date">${esc(it.d)} · <span class="tl-kind" style="color:var(--gold)">見返す日</span></div>⏰ ${esc(it.r.targetLabel||'答え合わせの日')}<div class="meta">「${title}」${it.r.outcome?' · 照合済み':''}</div></div>`;
+  });
+  if(cur!==null)html+='</div>';return html
+}
+function renderRecords(){renderFilters();const q=$('search').value.trim().toLowerCase();let rs=[...records].filter(r=>(activeFilter==='すべて'||(activeFilter==='__pin'?r.pinned:tagsOf(r).includes(activeFilter)))&&($('ocFilter').value===''||($('ocFilter').value==='none'?!r.outcome:r.outcome===$('ocFilter').value))&&[r.title,tagsOf(r).join(' '),r.source,r.result,r.memo,r.targetLabel,(r.events||[]).map(e=>e.text).join(' ')].join(' ').toLowerCase().includes(q));rs.sort((a,b)=>$('sort').value==='old'?(a.date||'').localeCompare(b.date||''):(b.date||'').localeCompare(a.date||''));if(viewMode==='list')rs.sort((a,b)=>(b.pinned?1:0)-(a.pinned?1:0));document.querySelectorAll('[data-vm]').forEach(b=>b.classList.toggle('active',b.dataset.vm===viewMode));$('recordList').innerHTML=rs.length?(viewMode==='timeline'?timelineHtml(rs):rs.map(card).join('')):'<div class="empty"><div class="moon">✧</div>条件に合う記録が見つからないよ。<br>検索語を消すか「一覧を更新」を押してみてね。</div>';if($('recordCount'))$('recordCount').textContent=`表示 ${rs.length}件 ／ 保存中 ${records.length}件`;bindView()}
+function bindView(){document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>viewRecord(b.dataset.view));document.querySelectorAll('[data-pin]').forEach(b=>b.onclick=e=>{e.stopPropagation();togglePin(b.dataset.pin)})}
+function downloadIcs(r){
+  const d=r.targetDate.replace(/-/g,''),n=new Date(r.targetDate+'T00:00:00');n.setDate(n.getDate()+1);
+  const e=n.toLocaleDateString('sv-SE').replace(/-/g,''),ie=s=>String(s).replace(/[\\;,]/g,m=>'\\'+m).replace(/\r?\n/g,'\\n');
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Fortune Journal//JA','BEGIN:VEVENT','UID:'+r.id+'@fortune-journal','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,''),'DTSTART;VALUE=DATE:'+d,'DTEND;VALUE=DATE:'+e,'SUMMARY:'+ie('占いの答え合わせ：'+(r.title||r.targetLabel||'')),'DESCRIPTION:'+ie((r.targetLabel?r.targetLabel+'\n':'')+r.result.slice(0,300)),'BEGIN:VALARM','TRIGGER:PT9H','ACTION:DISPLAY','DESCRIPTION:占いの答え合わせの日です','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const url=URL.createObjectURL(new Blob([ics],{type:'text/calendar'})),a=document.createElement('a');a.href=url;a.download='fortune-reminder.ics';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)
+}
+function viewRecord(id){
+  const r=records.find(x=>String(x.id)===String(id));if(!r)return;
+  const evs=[...(r.events||[])].sort((a,b)=>(a.date||'').localeCompare(b.date||''));
+  $('modalRoot').innerHTML=`<div class="modal-back" id="backdrop"><div class="modal"><div class="modal-head"><div>${tagsHtml(r)}<h2 style="margin:9px 0 0">${esc(r.title||'無題の記録')}</h2><div class="meta">${esc(r.date)}${r.source?' · '+esc(r.source):''}</div></div><button class="close" id="closeModal">閉じる ✕</button></div>
+${r.targetLabel||r.targetDate?`<div class="hint" style="margin-top:14px">⏰ <b>予言の時期</b>：${esc(r.targetLabel||'')}${r.targetDate?`（見返す日 ${esc(r.targetDate)}）<div style="margin-top:8px"><button class="btn soft small" id="icsBtn" type="button">📅 カレンダーに登録（.ics）</button></div>`:''}</div>`:''}
+<hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>占いの結果</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.result)}</div>
+${r.images&&r.images.length?`<div class="img-grid" style="margin-top:14px">${r.images.map(i=>`<div class="it" data-img="${esc(i)}"></div>`).join('')}</div>`:''}
+${r.memo?`<h3 style="margin-top:22px">感想・メモ</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.memo)}</div>`:''}
+<h3 style="margin-top:22px">現実の出来事</h3><div class="ev-list">${evs.length?evs.map(e=>`<div class="ev"><span class="d">${esc(e.date)}</span><span class="t">${esc(e.text)}</span><button type="button" data-evdel="${esc(e.id)}" aria-label="削除">×</button></div>`).join(''):'<p class="sub" style="margin:0">まだありません。占いに関連して実際に起きたことを、日付つきで残せます。</p>'}</div>
+<div class="ev-add"><input class="search" type="date" id="evDate" value="${today()}"><input class="search" id="evText" placeholder="例：新しい仕事の話をもらった"><button class="btn soft small" id="evAdd" type="button">追加</button></div>
+<h3 style="margin-top:22px">現実との照合</h3><div class="actions">${[['','まだわからない'],['hit','当たった'],['partial','一部当たった'],['miss','外れた']].map(([v,l])=>`<button class="btn ${(r.outcome||'')===v?'primary':'outline'} small" data-oc="${v}">${l}</button>`).join('')}</div>
+<div class="actions" style="margin-top:24px"><button class="btn outline" id="pinBtn" type="button">${r.pinned?'★ お気に入り解除':'☆ お気に入りに追加'}</button><button class="btn primary" id="editRecord">編集する</button><button class="btn danger" id="deleteRecord">削除する</button></div></div></div>`;
+  $('closeModal').onclick=closeModal;
+  $('backdrop').addEventListener('click',e=>{if(e.target.id==='backdrop')closeModal()});
+  $('modalRoot').querySelectorAll('[data-oc]').forEach(b=>b.onclick=()=>{if(updateRec(id,{outcome:b.dataset.oc})){viewRecord(id);notify('照合結果を更新しました')}});
+  $('modalRoot').querySelectorAll('[data-img]').forEach(async el=>{const d=await getImg(el.dataset.img);if(!el.isConnected)return;if(d){el.innerHTML=`<img src="${d}" alt="添付画像">`;el.firstChild.onclick=()=>openLightbox(d)}else el.remove()});
+  $('modalRoot').querySelectorAll('[data-evdel]').forEach(b=>b.onclick=()=>{if(updateRec(id,{events:(r.events||[]).filter(e=>e.id!==b.dataset.evdel)}))viewRecord(id)});
+  $('evAdd').onclick=()=>{const t=$('evText').value.trim();if(!t){notify('出来事を入力してね');return}const ev={id:Date.now().toString(36)+Math.random().toString(36).slice(2,5),date:$('evDate').value||today(),text:t};if(updateRec(id,{events:[...(r.events||[]),ev]})){viewRecord(id);notify('出来事を追加しました')}};
+  $('evText').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing&&e.keyCode!==229){e.preventDefault();$('evAdd').click()}});
+  if($('icsBtn'))$('icsBtn').onclick=()=>downloadIcs(r);
+  $('pinBtn').onclick=()=>{if(updateRec(id,{pinned:!r.pinned}))viewRecord(id)};
+  $('editRecord').onclick=()=>{closeModal();editRecord(id)};
+  $('deleteRecord').onclick=()=>{if(confirm('この鑑定記録をゴミ箱に移しますか？（30日間は「データ管理」から復元できます）')){records=records.filter(x=>String(x.id)!==String(id));persist();closeModal();notify('ゴミ箱に移しました')}}
+}
 function closeModal(){$('modalRoot').innerHTML=''}
-function editRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;switchTab('dashboard');$('entryId').value=r.id;formTags=[...tagsOf(r)];renderFormTags();$('date').value=r.date||today();$('source').value=r.source||'';$('title').value=r.title||'';$('outcome').value=r.outcome||'';$('result').value=r.result;$('memo').value=r.memo||'';$('formTitle').textContent='鑑定記録を編集';$('saveBtn').textContent='変更を保存';$('cancelEdit').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
-function resetForm(){formTags=[];renderFormTags();$('entryId').value='';$('formTitle').textContent='鑑定結果を記録する';$('saveBtn').textContent='＋ 記録を保存';$('cancelEdit').classList.add('hidden')}
+function editRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;switchTab('dashboard');$('entryId').value=r.id;formTags=[...tagsOf(r)];renderFormTags();$('date').value=r.date||today();$('source').value=r.source||'';$('title').value=r.title||'';$('targetLabel').value=r.targetLabel||'';$('targetDate').value=r.targetDate||'';$('outcome').value=r.outcome||'';$('result').value=r.result;$('memo').value=r.memo||'';origImgs=[...(r.images||[])];formImgs=origImgs.map(i=>({id:i,data:imgCache.get(i)||null,isNew:false}));renderFormImgs();formImgs.filter(i=>!i.data).forEach(i=>getImg(i.id).then(d=>{if(d&&formImgs.includes(i)){i.data=d;renderFormImgs()}}));$('formTitle').textContent='鑑定記録を編集';$('saveBtn').textContent='変更を保存';$('cancelEdit').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+function resetForm(){formTags=[];renderFormTags();formImgs=[];origImgs=[];renderFormImgs();$('entryId').value='';$('formTitle').textContent='鑑定結果を記録する';$('saveBtn').textContent='＋ 記録を保存';$('cancelEdit').classList.add('hidden')}
 $('tagInput').addEventListener('keydown',e=>{if(e.isComposing||e.keyCode===229)return;if(e.key==='Enter'||e.key===','){e.preventDefault();addFormTag($('tagInput').value);$('tagInput').value=''}else if(e.key==='Backspace'&&!$('tagInput').value&&formTags.length){formTags.pop();renderFormTags()}});
 $('tagInput').addEventListener('input',e=>{if(e.isComposing)return;const v=$('tagInput').value;if(/[,、，]/.test(v)){v.split(/[,、，]/).forEach(addFormTag);$('tagInput').value=''}});
 $('tagInput').addEventListener('blur',()=>{addFormTag($('tagInput').value);$('tagInput').value=''});
-$('entryForm').addEventListener('submit',e=>{e.preventDefault();addFormTag($('tagInput').value);$('tagInput').value='';const id=$('entryId').value;const obj={id:id||((Date.now().toString(36))+Math.random().toString(36).slice(2,7)),tags:[...formTags],outcome:$('outcome').value,date:$('date').value,source:$('source').value.trim(),title:$('title').value.trim(),result:$('result').value.trim(),memo:$('memo').value.trim(),updatedAt:new Date().toISOString()};if(!obj.result){notify('占いの結果を入力してね');return}if(id){records=records.map(r=>String(r.id)===String(id)?{...r,...obj}:r)}else{obj.createdAt=obj.updatedAt;records.unshift(obj)}if(persist()){ $('entryForm').reset();$('date').value=today();resetForm();notify(id?'変更を保存しました':'鑑定結果を保存しました')}});
+$('entryForm').addEventListener('submit',e=>{e.preventDefault();addFormTag($('tagInput').value);$('tagInput').value='';const id=$('entryId').value;const obj={id:id||((Date.now().toString(36))+Math.random().toString(36).slice(2,7)),tags:[...formTags],targetLabel:$('targetLabel').value.trim(),targetDate:$('targetDate').value,images:formImgs.map(i=>i.id),outcome:$('outcome').value,date:$('date').value,source:$('source').value.trim(),title:$('title').value.trim(),result:$('result').value.trim(),memo:$('memo').value.trim(),updatedAt:new Date().toISOString()};if(!obj.result){notify('占いの結果を入力してね');return}if(id){records=records.map(r=>String(r.id)===String(id)?{...r,...obj}:r)}else{obj.createdAt=obj.updatedAt;records.unshift(obj)}if(persist()){saveImages(obj.id);$('entryForm').reset();$('date').value=today();resetForm();notify(id?'変更を保存しました':'鑑定結果を保存しました')}});
 $('cancelEdit').addEventListener('click',()=>{$('entryForm').reset();$('date').value=today();resetForm()});
 $('clearForm').addEventListener('click',()=>setTimeout(()=>{$('date').value=today();resetForm()},0));
+$('imgInput').addEventListener('change',async e=>{const files=[...e.target.files];e.target.value='';for(const f of files){if(formImgs.length>=4){notify('画像は1つの記録につき4枚までです');break}try{const d=await compressImage(f);formImgs.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),data:d,isNew:true});renderFormImgs()}catch(err){notify('画像を読み込めませんでした')}}});
+document.querySelectorAll('[data-vm]').forEach(b=>b.addEventListener('click',()=>{viewMode=b.dataset.vm;renderRecords()}));
 $('search').addEventListener('input',renderRecords);$('sort').addEventListener('change',renderRecords);$('ocFilter').addEventListener('change',renderRecords);if($('refreshRecords'))$('refreshRecords').addEventListener('click',()=>{render();renderRecords();notify(`保存データを再読み込みしました（${records.length}件）`)});
 function renderAnalysis(){const box=$('analysisContent');if(!records.length){box.innerHTML='<div class="empty"><div class="moon">☾</div><h3>分析する記録がまだありません</h3>まずは異なる占いの結果を2〜3件保存してみよう。</div>';return}
 const texts=records.map(r=>({r,text:(r.result+' '+r.memo+' '+r.title)}));
@@ -221,11 +383,11 @@ ${counts.length?counts.map(x=>`<div class="barrow"><div class="barlabel"><span>$
 <div class="hint" style="margin-top:22px"><b>読み解くときのポイント</b><br>・同じテーマが複数の鑑定に出ているか確認する。<br>・「鑑定結果」と「実際に起きたこと」を分けて考える。<br>・一致した部分だけでなく、当てはまらなかった部分も記録する。<br><br>これは文章内のキーワード集計であり、占いの正確性や未来を判定するものではありません。</div>`;
 }
 $('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({app:'占いノート',version:1,exportedAt:new Date().toISOString(),records},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`fortune-journal-backup-${today()}.json`;a.click();URL.revokeObjectURL(url);notify('バックアップを作成しました')});
-$('importBtn').addEventListener('click',async()=>{const f=$('importFile').files[0];if(!f){notify('バックアップファイルを選んでね');return}try{const d=JSON.parse(await f.text());const incoming=Array.isArray(d)?d:d.records;if(!Array.isArray(incoming))throw Error('invalid');const valid=incoming.filter(r=>r&&r.result).map(r=>({...r,id:String(r.id||Date.now()+Math.random()),date:r.date||'',source:r.source||'',title:r.title||'',memo:r.memo||''}));if(!valid.length)throw Error('empty');if($('importMode').value==='replace'){if(!confirm(`既存の${records.length}件を置き換えて、${valid.length}件を読み込みますか？`))return;records=valid}else{const ids=new Set(records.map(r=>String(r.id)));let added=0;valid.forEach(r=>{if(!ids.has(String(r.id))){records.push(r);ids.add(String(r.id));added++}});notify(`${added}件を追加しました（重複IDはスキップ）`)}persist();$('importFile').value='';notify('データを読み込みました')}catch(e){notify('ファイルを読み込めません。JSONバックアップか確認してね')}});
-$('deleteAllBtn').addEventListener('click',()=>{if(confirm('すべての鑑定記録を削除します。この操作は取り消せません。事前にバックアップしましたか？')){records=[];persist();notify('すべての記録を削除しました')}});
+$('importBtn').addEventListener('click',async()=>{const f=$('importFile').files[0];if(!f){notify('バックアップファイルを選んでね');return}try{const d=JSON.parse(await f.text());const incoming=Array.isArray(d)?d:d.records;if(!Array.isArray(incoming))throw Error('invalid');const valid=incoming.filter(r=>r&&r.result).map(r=>({...r,id:String(r.id||Date.now()+Math.random()).replace(/[\/\s]/g,'_'),date:r.date||'',source:r.source||'',title:r.title||'',memo:r.memo||''}));if(!valid.length)throw Error('empty');if($('importMode').value==='replace'){if(!confirm(`既存の${records.length}件を置き換えて、${valid.length}件を読み込みますか？`))return;records=valid}else{const ids=new Set(records.map(r=>String(r.id)));let added=0;valid.forEach(r=>{if(!ids.has(String(r.id))){records.push(r);ids.add(String(r.id));added++}});notify(`${added}件を追加しました（重複IDはスキップ）`)}persist();$('importFile').value='';notify('データを読み込みました')}catch(e){notify('ファイルを読み込めません。JSONバックアップか確認してね')}});
+$('deleteAllBtn').addEventListener('click',()=>{if(confirm('すべての鑑定記録をゴミ箱に移します。30日間は復元できます。よろしいですか？')){records=[];persist();notify('すべての記録をゴミ箱に移しました')}});
 $('date').value=today();stats();renderRecent();renderRecords();initFirebase();
 const originalRender=persist;
-function render(){stats();renderRecent();renderFormTags();if(!$('tab-records').classList.contains('hidden'))renderRecords();if(!$('tab-analysis').classList.contains('hidden'))renderAnalysis()}
+function render(){stats();renderRecent();renderPins();renderDue();renderFormTags();renderTrash();if(!$('tab-records').classList.contains('hidden'))renderRecords();if(!$('tab-analysis').classList.contains('hidden'))renderAnalysis()}
 })();
 </script>
 </body>

@@ -1,9 +1,19 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // 自分(ログイン中のユーザー)のドキュメントだけ読み書きできる
+    // 自分(ログイン中のユーザー)のデータだけ読み書きできる
     match /users/{userId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      // 記録は users/{uid}/records/{id} に1件ずつ保存
+      match /records/{recordId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // 添付画像は users/{uid}/images/{id} に1枚ずつ保存（圧縮したJPEG）
+      match /images/{imageId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
     }
     match /{document=**} {
       allow read, write: if false;
