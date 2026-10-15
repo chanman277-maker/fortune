@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#76549a">
+<title>占いノート — Fortune Journal</title>
+<style>
+:root{--bg:#faf8fc;--paper:#fff;--ink:#30283a;--muted:#81778d;--line:#ece5f2;--purple:#76549a;--purple2:#eee5f7;--lav:#f5effb;--pink:#f8e8ef;--gold:#b18a52;--green:#547f6d;--shadow:0 12px 35px #46335b0c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.6}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1120px;margin:auto;padding:22px 20px 48px}.hero{background:linear-gradient(125deg,#f2eafb,#fff4f7 70%,#f9f1e5);border:1px solid #eee4f5;border-radius:28px;padding:28px 30px;margin-bottom:20px;position:relative;overflow:hidden}.hero:after{content:"✧";position:absolute;font-size:130px;color:#cbb8df55;right:35px;top:-30px;pointer-events:none}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--purple)}h1{font-size:clamp(27px,4vw,38px);line-height:1.25;margin:8px 0;color:#49345f;letter-spacing:-.04em}.hero p{margin:8px 0 0;color:#70627f;max-width:620px}.hero-top{display:flex;align-items:center;gap:14px}.logo{width:52px;height:52px;border-radius:18px;background:#fff9;display:grid;place-items:center;font-size:27px;box-shadow:var(--shadow)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;max-width:530px}.stat{background:#ffffffb8;border:1px solid #fff;border-radius:15px;padding:12px 15px}.stat small{display:block;color:var(--muted);font-size:11px}.stat strong{font-size:24px;color:#49345f}.nav{display:flex;gap:8px;padding:6px;background:#f0ebf5;border-radius:17px;margin:18px 0 22px;position:sticky;top:8px;z-index:5;backdrop-filter:blur(12px)}.nav button{border:0;background:transparent;color:#766982;padding:11px 16px;border-radius:12px;flex:1;font-weight:700}.nav button.active{background:#fff;color:var(--purple);box-shadow:0 3px 12px #49345f10}.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:18px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);min-width:0}.panel h2{font-size:19px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 18px}.field{margin:14px 0}.field label{display:block;font-size:12px;font-weight:800;color:#675a73;margin-bottom:6px}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #e6deed;border-radius:12px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:#ad92ca;box-shadow:0 0 0 3px #eee5f7}.field textarea{min-height:120px;resize:vertical}.field textarea.short{min-height:80px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;transition:.15s}.btn.primary{background:var(--purple);color:white}.btn.primary:hover{background:#604080}.btn.soft{background:var(--purple2);color:var(--purple)}.btn.outline{background:#fff;border:1px solid var(--line);color:#685875}.btn.danger{background:#fff0f2;color:#a4455b}.btn.small{font-size:12px;padding:7px 10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.hint{background:#fbf8fe;border:1px solid #efe7f6;border-radius:14px;padding:14px;font-size:13px;color:#766782}.hint b{color:#5b456e}.tag{display:inline-block;font-size:11px;padding:4px 9px;border-radius:999px;background:#f0e8f7;color:#71548c;font-weight:800}.tag.pink{background:#f9e9ef;color:#a45e79}.record{border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:10px;transition:.15s}.record:hover{border-color:#cbb8df;background:#fdfbff}.record-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.record h3{font-size:15px;margin:7px 0 2px}.meta{font-size:11px;color:var(--muted)}.snippet{font-size:13px;color:#655b6e;white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 0}.empty{text-align:center;padding:38px 16px;color:var(--muted)}.empty .moon{font-size:36px}.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h2{margin:0}.search-row{display:flex;gap:9px;margin:14px 0}.search{flex:1;min-width:0}.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.filter{border:1px solid var(--line);background:#fff;color:#756a80;border-radius:999px;padding:6px 11px;font-size:12px}.filter.active{background:var(--purple);border-color:var(--purple);color:#fff}.barrow{margin:14px 0}.barlabel{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:6px}.bar{height:9px;background:#f0ebf5;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#9b7bb8,#d5b6d9)}.analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.insight{padding:16px;border-radius:16px;background:#f8f3fc;border:1px solid #eee5f6}.insight h3{margin:0 0 6px;font-size:14px}.insight p{font-size:13px;color:#6f6379;margin:0}.foot{font-size:11px;color:#92889a;text-align:center;margin-top:22px}.hidden{display:none!important}.modal-back{position:fixed;inset:0;background:#20152d66;z-index:20;display:grid;place-items:center;padding:16px}.modal{background:#fff;border-radius:22px;max-width:700px;width:100%;max-height:90vh;overflow:auto;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.close{border:0;background:#f3edf7;border-radius:10px;padding:7px 12px;color:var(--purple)}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#30283a;color:#fff;padding:11px 18px;border-radius:99px;font-size:13px;z-index:30;box-shadow:var(--shadow)}.storage-note{font-size:12px;color:#766782;background:#f8f4fb;padding:12px 14px;border-radius:13px;margin-top:14px}
+@media(max-width:760px){.app{padding:12px 12px 30px}.hero{padding:22px 18px;border-radius:22px}.hero:after{right:5px;font-size:95px}.layout{grid-template-columns:1fr}.panel{padding:17px}.nav{top:4px}.nav button{padding:10px 5px;font-size:13px}.stats{gap:7px}.stat{padding:10px}.stat strong{font-size:21px}.two,.analysis-grid{grid-template-columns:1fr}.section-title{align-items:flex-start;flex-direction:column}.search-row{flex-wrap:wrap}.search{flex-basis:100%}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+  <div class="hero-top"><div class="logo">☾</div><div><div class="eyebrow">FORTUNE JOURNAL · YOUR PERSONAL ARCHIVE · v1.1</div><h1>占いノート</h1></div></div>
+  <p>占いの結果を集めて、点と点をつなぐ。<br>自分を知るための、あなただけの鑑定データベース。</p>
+  <div class="stats"><div class="stat"><small>保存した鑑定</small><strong id="statTotal">0</strong></div><div class="stat"><small>占術の種類</small><strong id="statMethods">0</strong></div><div class="stat"><small>テーマの傾向</small><strong id="statThemes">0</strong></div></div>
+</header>
+<nav class="nav" aria-label="メインメニュー"><button class="active" data-tab="dashboard">✧ ホーム</button><button data-tab="records">▤ 記録一覧</button><button data-tab="analysis">⌁ 横断分析</button><button data-tab="backup">↗ データ管理</button></nav>
+
+<main>
+<section id="tab-dashboard" class="tab">
+  <div class="layout">
+    <div class="panel">
+      <h2 id="formTitle">鑑定結果を記録する</h2><p class="sub">鑑定文をそのまま貼り付けてOK。気づきや実際の出来事も一緒に残そう。</p>
+      <form id="entryForm">
+        <input id="entryId" type="hidden">
+        <div class="two">
+          <div class="field"><label for="method">占いの種類 *</label><select id="method" required><option>四柱推命</option><option>六星占術</option><option>西洋占星術</option><option>タロット</option><option>数秘術</option><option>九星気学</option><option>姓名判��</option><option>手相</option><option>動物占い</option><option>その他</option></select></div>
+          <div class="field"><label for="category">テーマ *</label><select id="category" required><option>性格・本質</option><option>恋愛・相性</option><option>仕事・転職</option><option>運勢・時期</option><option>人間関係</option><option>金運</option><option>健康・生活</option><option>総合鑑定</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="date">鑑定日 *</label><input id="date" type="date" required></div>
+          <div class="field"><label for="source">占い師・サイト名</label><input id="source" placeholder="例：○○先生、書籍名"></div>
+        </div>
+        <div class="field"><label for="title">記録タイトル</label><input id="title" placeholder="例：2026年の恋愛運、私の本質"></div>
+        <div class="field"><label for="result">占いの結果 *</label><textarea id="result" required placeholder="鑑定結果を貼り付けてね。長文でも大丈夫。&#10;&#10;例：人に気を遣いすぎる傾向がある。自分の気持ちを言葉にすることが大切。"></textarea></div>
+        <div class="field"><label for="memo">自分の感想・現実の出来事（任意）</label><textarea id="memo" class="short" placeholder="例：今の状況に当てはまると感じた。実際に起きたことは……"></textarea></div>
+        <div class="actions"><button class="btn primary" type="submit" id="saveBtn">＋ 記録を保存</button><button class="btn outline hidden" type="button" id="cancelEdit">編集をやめる</button><button class="btn outline" type="reset" id="clearForm">入力をクリア</button></div>
+      </form>
+      <div class="storage-note">🔒 データはこのブラウザ内に保存さ��ます。別の端末でも使う場合は「データ管理」からバックアップを移してください。</div>
+    </div>
+    <aside class="panel">
+      <h2>占いノートの使い方</h2><p class="sub">記録が増えるほど、自分の傾向を振り返りやすくなるよ。</p>
+      <div class="hint"><b>01 · まずは記録</b><br>占術・テーマ・鑑定日を選び、結果を保存。</div>
+      <div class="hint" style="margin-top:10px"><b>02 · 共通点を探す</b><br>「横断分析」で複数の鑑定に登場するキーワードを確認。</div>
+      <div class="hint" style="margin-top:10px"><b>03 · 現実と照らし合わせる</b><br>感想欄に実際の出来事や、自分がどう感じたかも記録。</div>
+      <div style="margin-top:22px"><div class="section-title"><h2>最近の記録</h2><button class="btn soft small" type="button" data-goto="records">一覧を見る →</button></div><div id="recentRecords"></div></div>
+    </aside>
+  </div>
+</section>
+
+<section id="tab-records" class="tab hidden">
+  <div class="panel">
+    <div class="section-title"><div><h2>鑑定記録一覧</h2><p class="sub" style="margin:4px 0 0">保存した記録を検索・編集できます。</p></div><button class="btn primary" type="button" data-goto="dashboard">＋ 新しい記録</button></div>
+    <div class="search-row"><input class="search" id="search" placeholder="タイトル・鑑定結果・占い名・メモを検索…"><select id="sort" class="search" style="max-width:165px;flex:0 0 165px"><option value="new">日付が新しい順</option><option value="old">日付が古い順</option></select></div>
+    <div class="actions" style="margin:12px 0"><button class="btn soft small" type="button" id="refreshRecords">↻ 一覧を更新</button><span id="recordCount" class="meta" aria-live="polite"></span></div><div id="filters" class="filters"></div><div id="recordList"></div>
+  </div>
+</section>
+
+<section id="tab-analysis" class="tab hidden">
+  <div class="panel">
+    <h2>占い横断分析</h2><p class="sub">保存した鑑定文を横断して、繰り返し出てくるテーマや占術ごとの違いを整理します。</p>
+    <div id="analysisContent"></div>
+  </div>
+</section>
+
+<section id="tab-backup" class="tab hidden">
+  <div class="layout">
+    <div class="panel"><h2>データのバックアップ</h2><p class="sub">機種変更やブラウザ変更に備えて、記録をファイルとして保存できます。</p>
+      <div class="hint"><b>データを書き出す</b><br>すべての記録をJSONファイルに保存します。大切な記録は定期的にバックアップしてね。</div>
+      <button class="btn primary" id="exportBtn" style="margin-top:14px">↓ バックアップをダ��ンロード</button>
+      <div style="height:1px;background:var(--line);margin:22px 0"></div>
+      <div class="hint"><b>バックアップを読み込む</b><br>以前に書き出したJSONファイルを読み込みます。既存の記録に追加するか、置き換えるかを選べます。</div>
+      <div class="field"><label for="importMode">読み込み方法</label><select id="importMode"><option value="merge">既存の記録に追加（重複IDはスキップ）</option><option value="replace">既存の記録を置き換える</option></select></div>
+      <div class="field"><label for="importFile">バックアップファイル（.json）</label><input id="importFile" type="file" accept=".json,application/json"></div>
+      <button class="btn soft" id="importBtn">↑ ファイルを読み込む</button>
+    </div>
+    <aside class="panel"><h2>保存について</h2><p class="sub">この試作版のデータの扱い</p>
+      <div class="hint"><b>このブラウザに保存</b><br>記録は端末・ブラウザ内のローカル領域に保存されます。通常は再訪問しても残りますが、サイトデータを消去すると消えることがあります。</div>
+      <div class="hint" style="margin-top:10px"><b>自動クラウド同期はありません</b><br>複数端末で同じデータを共有するには、ログイン機能とデータベースを接続する追加開発が必要です。</div>
+      <div class="hint" style="margin-top:10px"><b>分析について</b><br>現時点の分析はキーワード集計です。占いの結果を事実と断定せず、自分を振り返るヒントとして利用してください。</div>
+      <button class="btn danger" id="deleteAllBtn" style="margin-top:18px">すべての記録を削除</button>
+    </aside>
+  </div>
+</section>
+</main>
+<div class="foot">FORTUNE JOURNAL · 占いは自分を見つめるヒントとして。未来や他人の気持ちを保証するものではありません。</div>
+</div>
+<div id="modalRoot"></div><div id="toast" class="toast hidden" role="status"></div>
+<script>
+(()=>{
+const KEY='fortuneJournal.v1';
+const $=id=>document.getElementById(id);
+let records=[],activeFilter='すべて',toastTimer;
+const themes=['すべて','性格・本質','恋愛・相性','仕事・転職','運勢・時期','人間関係','金運','健康・生活','総合鑑定'];
+const lexicon=[
+['自分軸・自立',['自分軸','自立','主体性','自分らしく','自分の道','自分を大切','自分自身']],
+['慎重さ・考えすぎ',['慎重','考えすぎ','心配','不安','警戒','気にしすぎ','悩み']],
+['行動力・挑戦',['行動力','行動','挑戦','積極的','決断','チャンスを掴','一歩踏み出']],
+['恋愛・パートナー',['恋愛','相性','結婚','出会い','パートナー','恋人','彼との','愛情']],
+['変化・転機',['転機','変化','新しい','転換期','環境が変','チャンス','流れが変']],
+['対人関係・距離感',['人間関係','対人','コミュニケーション','距離感','縁','周囲の人','人付き合い']],
+['仕事・才能',['仕事','転職','キャリア','適職','才能','職場','能力','評価']],
+['休息・ペース',['休息','休む','無理をし','疲れ','焦らず','休養','マイペース']],
+['金運・豊かさ',['金運','お金','収入','貯金','豊かさ','財運']],
+['直感・感受性',['直感','感受性','繊細','感情','感覚','想像力']]
+];
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function today(){return new Date().toLocaleDateString('sv-SE')}
+function load(){try{const raw=localStorage.getItem(KEY);const d=JSON.parse(raw||'[]');records=Array.isArray(d)?d:[];return true}catch(e){records=[];return false}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(records));render();return true}catch(e){notify('保存できませんでした。ブラウザの空き容量を確認してください。');return false}}
+function notify(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.add('hidden'),2600)}
+function switchTab(name){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('hidden',e.id!=='tab-'+name));document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));if(name==='records')renderRecords();if(name==='analysis')renderAnalysis();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.goto)));
+function stats(){ $('statTotal').textContent=records.length;$('statMethods').textContent=new Set(records.map(r=>r.method)).size;$('statThemes').textContent=allThemes().length}
+function allThemes(){let txt=records.map(r=>r.result+' '+r.memo+' '+r.title).join(' ');return lexicon.filter(([name,words])=>words.some(w=>txt.includes(w))).map(x=>x[0])}
+function card(r){return `<article class="record"><div class="record-head"><div><span class="tag">${esc(r.method)}</span> <span class="tag pink">${esc(r.category)}</span><h3>${esc(r.title||r.category+'の鑑定')}</h3><div class="meta">${esc(r.date||'日付なし')}${r.source?' · '+esc(r.source):''}</div></div><button class="btn outline small" data-view="${esc(r.id)}">詳細 →</button></div><p class="snippet">${esc(r.result.slice(0,180))}${r.result.length>180?'…':''}</p></article>`}
+function renderRecent(){let rs=[...records].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,3);$('recentRecords').innerHTML=rs.length?rs.map(card).join(''):'<div class="empty"><div class="moon">☾</div>まだ記録がないよ。<br>最初の鑑定結果を保存してみよう。</div>';bindView()}
+function renderFilters(){$('filters').innerHTML=themes.map(t=>`<button class="filter ${t===activeFilter?'active':''}" data-filter="${esc(t)}">${esc(t)}</button>`).join('');$('filters').querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;renderRecords()}))}
+function renderRecords(){renderFilters();const q=$('search').value.trim().toLowerCase();let rs=[...records].filter(r=>(activeFilter==='すべて'||r.category===activeFilter)&&[r.title,r.method,r.category,r.source,r.result,r.memo].join(' ').toLowerCase().includes(q));rs.sort((a,b)=>$('sort').value==='old'?(a.date||'').localeCompare(b.date||''):(b.date||'').localeCompare(a.date||''));$('recordList').innerHTML=rs.length?rs.map(card).join(''):'<div class="empty"><div class="moon">✧</div>条件に合う記録が見つからないよ。<br>検索語を消すか「一覧を更新」を押してみてね。</div>';if($('recordCount'))$('recordCount').textContent=`表示 ${rs.length}件 ／ 保存中 ${records.length}件`;bindView()}
+function bindView(){document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>viewRecord(b.dataset.view)))}
+function viewRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;$('modalRoot').innerHTML=`<div class="modal-back" id="backdrop"><div class="modal"><div class="modal-head"><div><span class="tag">${esc(r.method)}</span> <span class="tag pink">${esc(r.category)}</span><h2 style="margin:9px 0 0">${esc(r.title||r.category+'の鑑定')}</h2><div class="meta">${esc(r.date)}${r.source?' · '+esc(r.source):''}</div></div><button class="close" id="closeModal">閉じる ✕</button></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>占いの結果</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.result)}</div>${r.memo?`<h3 style="margin-top:22px">感想・現実の出来事</h3><div style="white-space:pre-wrap;overflow-wrap:anywhere">${esc(r.memo)}</div>`:''}<div class="actions" style="margin-top:24px"><button class="btn primary" id="editRecord">編集する</button><button class="btn danger" id="deleteRecord">削除する</button></div></div></div>`;
+$('closeModal').onclick=closeModal;$('backdrop').addEventListener('click',e=>{if(e.target.id==='backdrop')closeModal()});$('editRecord').onclick=()=>{closeModal();editRecord(id)};$('deleteRecord').onclick=()=>{if(confirm('この鑑定記録を削除しますか？')){records=records.filter(x=>String(x.id)!==String(id));persist();closeModal();notify('記録を削除しました')}}}
+function closeModal(){$('modalRoot').innerHTML=''}
+function editRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;switchTab('dashboard');$('entryId').value=r.id;$('method').value=r.method;$('category').value=r.category;$('date').value=r.date||today();$('source').value=r.source||'';$('title').value=r.title||'';$('result').value=r.result;$('memo').value=r.memo||'';$('formTitle').textContent='鑑定記録を編集';$('saveBtn').textContent='変更を保存';$('cancelEdit').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+function resetForm(){$('entryId').value='';$('formTitle').textContent='鑑定結果を記録する';$('saveBtn').textContent='＋ 記録を保存';$('cancelEdit').classList.add('hidden')}
+$('entryForm').addEventListener('submit',e=>{e.preventDefault();const id=$('entryId').value;const obj={id:id||((Date.now().toString(36))+Math.random().toString(36).slice(2,7)),method:$('method').value,category:$('category').value,date:$('date').value,source:$('source').value.trim(),title:$('title').value.trim(),result:$('result').value.trim(),memo:$('memo').value.trim(),updatedAt:new Date().toISOString()};if(!obj.result){notify('占いの結果を入力してね');return}if(id){records=records.map(r=>String(r.id)===String(id)?{...r,...obj}:r)}else{obj.createdAt=obj.updatedAt;records.unshift(obj)}if(persist()){ $('entryForm').reset();$('date').value=today();resetForm();notify(id?'変更を保存しました':'鑑定結果を保存しました')}});
+$('cancelEdit').addEventListener('click',()=>{$('entryForm').reset();$('date').value=today();resetForm()});
+$('clearForm').addEventListener('click',()=>setTimeout(()=>{$('date').value=today();resetForm()},0));
+$('search').addEventListener('input',renderRecords);$('sort').addEventListener('change',renderRecords);if($('refreshRecords'))$('refreshRecords').addEventListener('click',()=>{load();render();renderRecords();notify(`保存データを再読み込みしました（${records.length}件）`)});
+function renderAnalysis(){const box=$('analysisContent');if(!records.length){box.innerHTML='<div class="empty"><div class="moon">☾</div><h3>分析する記録がまだありません</h3>まずは異なる占いの結果を2〜3件保存してみよう。</div>';return}
+const texts=records.map(r=>({r,text:(r.result+' '+r.memo+' '+r.title)}));
+const counts=lexicon.map(([name,words])=>({name,words,count:texts.filter(x=>words.some(w=>x.text.includes(w))).length,methods:[...new Set(texts.filter(x=>words.some(w=>x.text.includes(w))).map(x=>x.r.method))]})).filter(x=>x.count>0).sort((a,b)=>b.count-a.count);
+const catCounts=[...new Set(records.map(r=>r.category))].map(c=>({name:c,count:records.filter(r=>r.category===c).length})).sort((a,b)=>b.count-a.count);
+const methodCounts=[...new Set(records.map(r=>r.method))].map(m=>({name:m,count:records.filter(r=>r.method===m).length})).sort((a,b)=>b.count-a.count);
+const max=Math.max(1,...counts.map(x=>x.count));
+box.innerHTML=`<div class="analysis-grid"><div class="insight"><h3>✧ 記録の全体像</h3><p>${records.length}件の鑑定、${new Set(records.map(r=>r.method)).size}種類の占術を記録中。テーマや言葉の傾向を見比べてみよう。</p></div><div class="insight"><h3>☾ まず注目したいこと</h3><p>${counts.length?`「${esc(counts[0].name)}」に関連する言葉が、${counts[0].count}件の記録に含まれています。`: '鑑定文に出てくる言葉が増えると、テーマの傾向が表示されます。'}</p></div></div>
+<h3 style="margin:24px 0 8px">繰り返し登場するテーマ</h3><p class="sub">キーワードを含む記録の件数です。同じ記録内に複数の言葉があっても1件として数えます。</p>
+${counts.length?counts.map(x=>`<div class="barrow"><div class="barlabel"><span>${esc(x.name)}</span><span>${x.count} / ${records.length}件${x.methods.length>1?' · '+esc(x.methods.join('・')):''}</span></div><div class="bar"><span style="width:${x.count/max*100}%"></span></div></div>`).join(''):'<p class="sub">一致するキーワードがありません。記録を追加すると分析���やすくなります。</p>'}
+<div class="analysis-grid" style="margin-top:24px"><div><h3>占術ごとの記録数</h3>${methodCounts.map(x=>`<div class="barrow"><div class="barlabel"><span>${esc(x.name)}</span><b>${x.count}</b></div><div class="bar"><span style="width:${x.count/Math.max(1,...methodCounts.map(y=>y.count))*100}%"></span></div></div>`).join('')}</div><div><h3>テーマごとの記録数</h3>${catCounts.map(x=>`<div class="barrow"><div class="barlabel"><span>${esc(x.name)}</span><b>${x.count}</b></div><div class="bar"><span style="width:${x.count/Math.max(1,...catCounts.map(y=>y.count))*100}%"></span></div></div>`).join('')}</div></div>
+<div class="hint" style="margin-top:22px"><b>読み解くときのポイント</b><br>・同じテーマが複数の占術に出ているか確認する。<br>・「鑑定結果」と「実際に起きたこと」を分けて考える。<br>・一致した部分だけでなく、当てはまらなかった部分も記録する。<br><br>これは文章内のキーワード集計であり、占いの正確性や未来を判定するものではありません。</div>`;
+}
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({app:'占いノート',version:1,exportedAt:new Date().toISOString(),records},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`fortune-journal-backup-${today()}.json`;a.click();URL.revokeObjectURL(url);notify('バックアップを作成しました')});
+$('importBtn').addEventListener('click',async()=>{const f=$('importFile').files[0];if(!f){notify('バックアップファイルを選んでね');return}try{const d=JSON.parse(await f.text());const incoming=Array.isArray(d)?d:d.records;if(!Array.isArray(incoming))throw Error('invalid');const valid=incoming.filter(r=>r&&r.result&&r.method&&r.category).map(r=>({...r,id:String(r.id||Date.now()+Math.random()),date:r.date||'',source:r.source||'',title:r.title||'',memo:r.memo||''}));if(!valid.length)throw Error('empty');if($('importMode').value==='replace'){if(!confirm(`既存の${records.length}件を置き換えて、${valid.length}件を読み込みますか？`))return;records=valid}else{const ids=new Set(records.map(r=>String(r.id)));let added=0;valid.forEach(r=>{if(!ids.has(String(r.id))){records.push(r);ids.add(String(r.id));added++}});notify(`${added}件を追加しました（重複IDはスキップ）`)}persist();$('importFile').value='';notify('データを読み込みました')}catch(e){notify('ファイルを読み込めません。JSONバックアップか確認してね')} });
+$('deleteAllBtn').addEventListener('click',()=>{if(confirm('すべての鑑定記録を削除します。この操作は取り消せません。事前にバックアップしましたか？')){records=[];persist();notify('すべての記録を削除しました')}});
+load();$('date').value=today();stats();renderRecent();renderRecords();
+const originalRender=persist;
+function render(){stats();renderRecent();if(!$('tab-records').classList.contains('hidden'))renderRecords();if(!$('tab-analysis').classList.contains('hidden'))renderAnalysis()}
+})();
+</script>
+</body>
+</html>
