@@ -1,0 +1,12 @@
+{
+  "name": "占いノート",
+  "short_name": "占いノート",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#faf8fc",
+  "theme_color": "#76549a",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
